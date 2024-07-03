@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 공통 css */
+        html, body {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            background: linear-gradient(#000000, #808080, #ff99ee);
+        }
+
+        .loginContainer {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 35vh;
+        }
+
+        .loginStatusWrap select {
+            width: 210px;
+            height: 35px;
+            font-size: 18px;
+            margin: 10px 0px;
+        }
+
+        .btnWrap {
+            margin-bottom: 41.1vh;
+        }
+
+        .btnWrap button {
+            width: 210px;
+            height: 35px;
+        }
+
+        .custom-btn {
+            width: 130px;
+            height: 40px;
+            color: #fff;
+            border-radius: 5px;
+            padding: 10px 25px;
+            font-family: 'Lato', sans-serif;
+            font-weight: 500;
+            background: transparent;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            display: inline-block;
+            box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+            7px 7px 20px 0px rgba(0,0,0,.1),
+            4px 4px 5px 0px rgba(0,0,0,.1);
+            outline: none;
+        }
+
+        .btn-9 {
+            border: none;
+            transition: all 0.3s ease;
+            overflow: hidden;
+        }
+        .btn-9:after {
+            position: absolute;
+            content: " ";
+            z-index: -1;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #1fd1f9;
+            background-image: linear-gradient(315deg, #1fd1f9 0%, #b621fe 74%);
+            transition: all 0.3s ease;
+        }
+        .btn-9:hover {
+            background: transparent;
+            /* box-shadow:  4px 4px 6px 0 rgba(255,255,255,.5),
+                        -4px -4px 6px 0 rgba(116, 125, 136, .2), 
+                inset -4px -4px 6px 0 rgba(255,255,255,.5),
+                inset 4px 4px 6px 0 rgba(116, 125, 136, .3);
+            color: #fff; */
+        }
+        .btn-9:hover:after {
+            -webkit-transform: scale(2) rotate(180deg);
+            transform: scale(2) rotate(180deg);
+            box-shadow:  4px 4px 6px 0 rgba(255,255,255,.5),
+                        -4px -4px 6px 0 rgba(116, 125, 136, .2), 
+                inset -4px -4px 6px 0 rgba(255,255,255,.5),
+                inset 4px 4px 6px 0 rgba(116, 125, 136, .3);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="loginContainer">
+        <div class="logoWrap">
+            <img src="뷰티피플로고.png">
+        </div>
+        <div class="loginStatusWrap">
+            <select>
+                <option value="admin">관리자</option>
+                <option value="user1">사용자1</option>
+                <option value="user2">사용자2</option>
+            </select>
+        </div>
+        <div class="btnWrap">
+            <button type="button" class="custom-btn btn-9">로그인</button>
+        </div>
+    </div>
+</body>
+</html>
